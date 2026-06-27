@@ -302,6 +302,74 @@ export default function Home() {
           </div>
         </div>
       </section>
+            <section id="safety" className="bg-brand-forest px-6 py-20 text-white">
+        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+          <div>
+            <Badge className="mb-4 rounded-full bg-white/10 px-4 py-2 text-brand-gold hover:bg-white/10">
+              Trust & Safety
+            </Badge>
+
+            <h2 className="font-serif text-4xl font-bold tracking-tight md:text-5xl">
+              Built for families who need more than a booking.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-white/70">
+              When care involves your loved ones, trust is not a feature — it is
+              the foundation. Hands is designed around verified people, clear
+              communication, and dignity-first support.
+            </p>
+
+            <div className="mt-8 rounded-3xl border border-white/10 bg-white/10 p-6">
+              <p className="font-serif text-2xl font-bold text-brand-gold">
+                Important boundary
+              </p>
+              <p className="mt-3 text-sm leading-7 text-white/70">
+                Hands Care Partners do not replace doctors, nurses, ambulances,
+                or emergency medical services. For emergencies, families should
+                contact local emergency services immediately.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            {[
+              {
+                title: "Verified Care Partners",
+                text: "Care Partners are positioned as trusted local people, not gig workers or casual helpers.",
+              },
+              {
+                title: "Visit updates",
+                text: "Families can receive clear updates before, during, and after the visit for peace of mind.",
+              },
+              {
+                title: "Dignity-first care",
+                text: "The service is built around warmth, respect, and companionship — not domestic labor.",
+              },
+              {
+                title: "Clear service limits",
+                text: "Hands focuses on presence and support, while medical decisions remain with professionals.",
+              },
+            ].map((item) => (
+              <Card
+                key={item.title}
+                className="border-white/10 bg-white/10 text-white shadow-none"
+              >
+                <CardContent className="p-6">
+                  <div className="mb-5 h-2 w-14 rounded-full bg-brand-gold" />
+
+                  <h3 className="font-serif text-2xl font-bold">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-7 text-white/70">
+                    {item.text}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
