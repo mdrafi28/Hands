@@ -620,6 +620,111 @@ export default function Home() {
           </div>
         </div>
       </section>
+            <section className="bg-brand-white px-6 py-20">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-brand-forest px-6 py-16 text-center text-white md:px-16">
+          <p className="text-sm uppercase tracking-[0.3em] text-brand-gold">
+            Local Hands. Global Hearts.
+          </p>
+
+          <h2 className="mx-auto mt-5 max-w-3xl font-serif text-4xl font-bold tracking-tight md:text-6xl">
+            You may be far away. Care does not have to feel far.
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/70 md:text-lg">
+            Arrange trusted local presence for your loved ones back home —
+            with warmth, dignity, and clear communication.
+          </p>
+
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+            <Button
+              asChild
+              className="h-12 rounded-full bg-brand-gold px-8 text-base text-brand-forest hover:bg-brand-gold/90"
+            >
+              <a href="#request-care">Request care</a>
+            </Button>
+
+            <Button
+              asChild
+              variant="outline"
+              className="h-12 rounded-full border-white/20 bg-transparent px-8 text-base text-white hover:bg-white/10 hover:text-white"
+            >
+              <a href="#how-it-works">How it works</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-brand-forest px-6 py-10 text-white">
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
+          <div className="max-w-sm">
+            <div className="flex items-center gap-3">
+              <HandLogo />
+              <div>
+                <p className="font-serif text-2xl font-bold leading-none">
+                  Hands
+                </p>
+                <p className="text-xs text-white/50">
+                  Local Hands. Global Hearts.
+                </p>
+              </div>
+            </div>
+
+            <p className="mt-5 text-sm leading-7 text-white/60">
+              Trusted local care support for families who cannot always be
+              physically present with their loved ones back home.
+            </p>
+          </div>
+
+          <div className="grid gap-8 text-sm sm:grid-cols-3">
+            <div>
+              <p className="font-medium text-brand-gold">Explore</p>
+              <div className="mt-4 space-y-3 text-white/60">
+                <p>
+                  <a href="#how-it-works" className="hover:text-white">
+                    How it works
+                  </a>
+                </p>
+                <p>
+                  <a href="#services" className="hover:text-white">
+                    Services
+                  </a>
+                </p>
+                <p>
+                  <a href="#safety" className="hover:text-white">
+                    Trust & Safety
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <p className="font-medium text-brand-gold">Care</p>
+              <div className="mt-4 space-y-3 text-white/60">
+                <p>Hospital visits</p>
+                <p>Companionship</p>
+                <p>Errands & support</p>
+              </div>
+            </div>
+
+            <div>
+              <p className="font-medium text-brand-gold">Status</p>
+              <div className="mt-4 space-y-3 text-white/60">
+                <p>Frontend MVP</p>
+                <p>Backend coming later</p>
+                <p>Vercel ready</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-6 text-xs leading-6 text-white/45 md:flex-row md:items-center md:justify-between">
+          <p>© 2026 Hands. All rights reserved.</p>
+          <p>
+            Hands is not an emergency medical provider. In emergencies, contact
+            local emergency services immediately.
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
