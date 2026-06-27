@@ -228,6 +228,80 @@ export default function Home() {
           </div>
         </div>
       </section>
+            <section id="services" className="bg-brand-mist px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div className="max-w-2xl">
+              <Badge className="mb-4 rounded-full bg-white px-4 py-2 text-brand-green hover:bg-white">
+                Services
+              </Badge>
+
+              <h2 className="font-serif text-4xl font-bold tracking-tight text-brand-forest md:text-5xl">
+                Support for the moments when presence matters most.
+              </h2>
+            </div>
+
+            <p className="max-w-md text-base leading-7 text-brand-forest/70">
+              From hospital visits to everyday errands, Hands focuses on care,
+              dignity, and real human presence — not just task completion.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {[
+              {
+                icon: "🏥",
+                title: "Hospital visit support",
+                text: "A Care Partner can accompany your loved one to appointments, help with basic coordination, and stay present during the visit.",
+              },
+              {
+                icon: "💊",
+                title: "Pharmacy & medicine pickup",
+                text: "Support with picking up medicines, basic supplies, and other essentials when family cannot be there physically.",
+              },
+              {
+                icon: "🛒",
+                title: "Errands & appointment help",
+                text: "Help with everyday outside tasks such as checkups, bank visits, document work, or local errands.",
+              },
+              {
+                icon: "☕",
+                title: "Companionship & check-ins",
+                text: "Someone trusted can spend time with your loved one, check on their comfort, and offer warm human company.",
+              },
+              {
+                icon: "🍲",
+                title: "Food & comfort support",
+                text: "Assistance with meals, water, basic comfort needs, and making sure they are not handling everything alone.",
+              },
+              {
+                icon: "📲",
+                title: "Family update coordination",
+                text: "Families abroad receive simple updates so they feel informed, reassured, and connected throughout the visit.",
+              },
+            ].map((service) => (
+              <Card
+                key={service.title}
+                className="border-white/70 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              >
+                <CardContent className="p-6">
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-gold/40 text-2xl">
+                    {service.icon}
+                  </div>
+
+                  <h3 className="font-serif text-2xl font-bold text-brand-forest">
+                    {service.title}
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-7 text-brand-forest/65">
+                    {service.text}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
