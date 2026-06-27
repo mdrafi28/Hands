@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 function HandLogo() {
   return (
@@ -162,6 +163,68 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+            <section id="how-it-works" className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-2xl">
+            <Badge className="mb-4 rounded-full bg-brand-mist px-4 py-2 text-brand-green hover:bg-brand-mist">
+              How it works
+            </Badge>
+
+            <h2 className="font-serif text-4xl font-bold tracking-tight text-brand-forest md:text-5xl">
+              Care that feels close, even when you are far away.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-brand-forest/70">
+              Hands makes it simple for families abroad to arrange trusted local
+              support for their loved ones back home.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-4">
+            {[
+              {
+                step: "01",
+                title: "Tell us what they need",
+                text: "Share the city, timing, and type of support needed — hospital visit, errands, or companionship.",
+              },
+              {
+                step: "02",
+                title: "We match a Care Partner",
+                text: "A trusted local Care Partner is assigned based on availability, location, and service need.",
+              },
+              {
+                step: "03",
+                title: "Someone is physically there",
+                text: "The Care Partner accompanies your loved one, helps with basic tasks, and stays present.",
+              },
+              {
+                step: "04",
+                title: "You receive updates",
+                text: "Get simple visit updates so you know what is happening, even from another country.",
+              },
+            ].map((item) => (
+              <Card
+                key={item.step}
+                className="border-brand-forest/10 bg-brand-white shadow-sm"
+              >
+                <CardContent className="p-6">
+                  <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-forest font-serif text-lg font-bold text-brand-gold">
+                    {item.step}
+                  </div>
+
+                  <h3 className="font-serif text-2xl font-bold text-brand-forest">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-7 text-brand-forest/65">
+                    {item.text}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
