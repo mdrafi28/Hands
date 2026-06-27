@@ -1,65 +1,170 @@
-import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+
+function HandLogo() {
+  return (
+    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-gold">
+      <svg
+        viewBox="0 0 28 28"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-7 w-7"
+      >
+        <path
+          d="M8 20 C8 20 6 18 6 14 L6 10 C6 9 7 8 8 8 C9 8 10 9 10 10 L10 14"
+          stroke="#1C3A2F"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        <path
+          d="M10 14 L10 9 C10 8 11 7 12 7 C13 7 14 8 14 9 L14 13"
+          stroke="#1C3A2F"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        <path
+          d="M14 13 L14 9.5 C14 8.5 15 7.5 16 7.5 C17 7.5 18 8.5 18 9.5 L18 13"
+          stroke="#1C3A2F"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        <path
+          d="M18 13 L18 11 C18 10 19 9 20 9 C21 9 22 10 22 11 L22 16 C22 19.5 19 22 14 22 C11 22 8 20 8 20"
+          stroke="#1C3A2F"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-brand-white text-brand-forest">
+      <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+        <div className="flex items-center gap-3">
+          <HandLogo />
+          <div>
+            <p className="font-serif text-2xl font-bold leading-none">Hands</p>
+            <p className="text-xs text-brand-forest/60">
+              Local Hands. Global Hearts.
+            </p>
+          </div>
+        </div>
+
+        <nav className="hidden items-center gap-8 text-sm text-brand-forest/70 md:flex">
+          <a href="#how-it-works" className="hover:text-brand-forest">
+            How it works
+          </a>
+          <a href="#services" className="hover:text-brand-forest">
+            Services
+          </a>
+          <a href="#safety" className="hover:text-brand-forest">
+            Trust & Safety
+          </a>
+        </nav>
+
+        <Button className="rounded-full bg-brand-forest px-6 text-white hover:bg-brand-green">
+          Request care
+        </Button>
+      </header>
+
+      <section className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24">
+        <div>
+          <Badge className="mb-6 rounded-full bg-brand-mist px-4 py-2 text-brand-green hover:bg-brand-mist">
+            Trusted local care, booked from anywhere
+          </Badge>
+
+          <h1 className="max-w-3xl font-serif text-5xl font-bold leading-tight tracking-tight text-brand-forest md:text-7xl">
+            You can&apos;t always be there. But now, someone trusted can be.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="mt-6 max-w-xl text-lg leading-8 text-brand-forest/70">
+            Hands helps families abroad book verified local Care Partners for
+            their loved ones back home — for hospital visits, errands,
+            companionship, and everyday support.
           </p>
+
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <Button className="h-12 rounded-full bg-brand-forest px-8 text-base text-white hover:bg-brand-green">
+              Book a Care Partner
+            </Button>
+            <Button
+              variant="outline"
+              className="h-12 rounded-full border-brand-forest/20 bg-transparent px-8 text-base text-brand-forest hover:bg-brand-mist"
+            >
+              See how it works
+            </Button>
+          </div>
+
+          <div className="mt-10 grid max-w-lg grid-cols-3 gap-4 text-sm">
+            <div>
+              <p className="font-serif text-3xl font-bold text-brand-forest">
+                24/7
+              </p>
+              <p className="text-brand-forest/60">Care requests</p>
+            </div>
+            <div>
+              <p className="font-serif text-3xl font-bold text-brand-forest">
+                ID
+              </p>
+              <p className="text-brand-forest/60">Verified partners</p>
+            </div>
+            <div>
+              <p className="font-serif text-3xl font-bold text-brand-forest">
+                Live
+              </p>
+              <p className="text-brand-forest/60">Visit updates</p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="relative">
+          <div className="absolute -left-6 -top-6 h-40 w-40 rounded-full border border-brand-gold/40" />
+          <div className="absolute -bottom-8 -right-6 h-52 w-52 rounded-full bg-brand-mist" />
+
+          <div className="relative rounded-[2rem] bg-brand-forest p-6 text-white shadow-2xl">
+            <div className="rounded-[1.5rem] bg-white/10 p-5">
+              <p className="text-sm uppercase tracking-[0.25em] text-white/50">
+                Live visit
+              </p>
+
+              <div className="mt-6 rounded-2xl bg-white p-5 text-brand-forest">
+                <p className="text-sm text-brand-forest/60">
+                  Care Partner assigned
+                </p>
+                <p className="mt-1 font-serif text-2xl font-bold">
+                  Priya has arrived
+                </p>
+                <p className="mt-3 text-sm leading-6 text-brand-forest/70">
+                  Your visit is live. She is accompanying your father to the
+                  hospital appointment and you&apos;ll receive updates along the
+                  way.
+                </p>
+              </div>
+
+              <div className="mt-4 grid grid-cols-2 gap-4">
+                <div className="rounded-2xl bg-white/10 p-4">
+                  <p className="text-xs text-white/50">Service</p>
+                  <p className="mt-1 font-medium">Hospital visit</p>
+                </div>
+                <div className="rounded-2xl bg-white/10 p-4">
+                  <p className="text-xs text-white/50">Duration</p>
+                  <p className="mt-1 font-medium">2 hours</p>
+                </div>
+              </div>
+
+              <div className="mt-4 rounded-2xl bg-brand-gold p-4 text-brand-forest">
+                <p className="text-sm font-medium">
+                  “Your parents are in good hands.”
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
