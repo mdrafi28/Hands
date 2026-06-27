@@ -3,6 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 function HandLogo() {
   return (
@@ -544,6 +550,74 @@ export default function Home() {
               </form>
             </CardContent>
           </Card>
+        </div>
+      </section>
+            <section className="bg-white px-6 py-16">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <Badge className="mb-4 rounded-full bg-brand-mist px-4 py-2 text-brand-green hover:bg-brand-mist">
+              FAQ
+            </Badge>
+
+            <h2 className="font-serif text-4xl font-bold tracking-tight text-brand-forest md:text-5xl">
+              Questions families ask first.
+            </h2>
+
+            <p className="mt-5 text-base leading-7 text-brand-forest/70">
+              Simple answers about what Hands does, where it helps, and what
+              families should know before requesting care.
+            </p>
+          </div>
+
+          <div className="rounded-[1.5rem] border border-brand-forest/10 bg-brand-white p-4 shadow-sm">
+            <Accordion type="single" collapsible className="w-full">
+              {[
+                {
+                  question: "Is Hands a medical emergency service?",
+                  answer:
+                    "No. Hands is not an ambulance, hospital, doctor, or emergency medical provider. Care Partners support presence, coordination, companionship, and basic non-medical help. In emergencies, contact local emergency services immediately.",
+                },
+                {
+                  question: "Who are Care Partners?",
+                  answer:
+                    "Care Partners are trusted local people who can physically be present with your loved one for appointments, errands, check-ins, and companionship.",
+                },
+                {
+                  question: "Can I book from outside India?",
+                  answer:
+                    "Yes. Hands is designed for families who live away from home and want to arrange local support for parents or loved ones back home.",
+                },
+                {
+                  question: "What support can I request?",
+                  answer:
+                    "You can request hospital visit support, medicine pickup, local errands, appointment help, companionship, food support, and family update coordination.",
+                },
+                {
+                  question: "Will I receive updates during the visit?",
+                  answer:
+                    "Yes, the product direction includes simple visit updates so families can feel reassured while the Care Partner is with their loved one.",
+                },
+                {
+                  question: "Is this form connected to a backend?",
+                  answer:
+                    "Not yet. This is currently a frontend MVP. Backend request handling, admin review, partner assignment, notifications, and payments can be added later.",
+                },
+              ].map((item, index) => (
+                <AccordionItem
+                  key={item.question}
+                  value={`item-${index}`}
+                  className="border-brand-forest/10"
+                >
+                  <AccordionTrigger className="py-4 text-left text-base font-semibold text-brand-forest no-underline hover:text-brand-green hover:no-underline">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-4 text-sm leading-7 text-brand-forest/70">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </section>
     </main>
