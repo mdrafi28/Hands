@@ -1,6 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 function HandLogo() {
   return (
@@ -429,6 +431,119 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+            <section id="request-care" className="bg-brand-white px-6 py-20">
+        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-start">
+          <div>
+            <Badge className="mb-4 rounded-full bg-white px-4 py-2 text-brand-green hover:bg-white">
+              Request care
+            </Badge>
+
+            <h2 className="font-serif text-4xl font-bold tracking-tight text-brand-forest md:text-5xl">
+              Tell us where your loved one needs a hand.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-brand-forest/70">
+              Share a few details and our team will help understand the type of
+              support needed. This is a frontend demo for now, so the form is
+              not connected to a backend yet.
+            </p>
+
+            <div className="mt-8 rounded-3xl bg-white p-6 shadow-sm">
+              <p className="font-serif text-2xl font-bold text-brand-forest">
+                What happens next?
+              </p>
+
+              <div className="mt-5 space-y-4 text-sm leading-7 text-brand-forest/70">
+                <p>1. We review the care request details.</p>
+                <p>2. We confirm the location, timing, and support type.</p>
+                <p>3. A suitable Care Partner is assigned if available.</p>
+              </div>
+            </div>
+          </div>
+
+          <Card className="border-brand-forest/10 bg-white shadow-sm">
+            <CardContent className="p-6 md:p-8">
+              <form className="grid gap-5">
+                <div className="grid gap-2">
+                  <label className="text-sm font-medium text-brand-forest">
+                    Your name
+                  </label>
+                  <Input
+                    placeholder="Enter your full name"
+                    className="h-12 border-brand-forest/15 bg-brand-white"
+                  />
+                </div>
+
+                <div className="grid gap-2">
+                  <label className="text-sm font-medium text-brand-forest">
+                    Phone number
+                  </label>
+                  <Input
+                    placeholder="+91 98765 43210"
+                    className="h-12 border-brand-forest/15 bg-brand-white"
+                  />
+                </div>
+
+                <div className="grid gap-2">
+                  <label className="text-sm font-medium text-brand-forest">
+                    City where care is needed
+                  </label>
+                  <Input
+                    placeholder="Hyderabad, Bengaluru, Chennai..."
+                    className="h-12 border-brand-forest/15 bg-brand-white"
+                  />
+                </div>
+
+                <div className="grid gap-2">
+                  <label className="text-sm font-medium text-brand-forest">
+                    Who needs support?
+                  </label>
+                  <Input
+                    placeholder="Mother, father, grandparent, relative..."
+                    className="h-12 border-brand-forest/15 bg-brand-white"
+                  />
+                </div>
+
+                <div className="grid gap-2">
+                  <label className="text-sm font-medium text-brand-forest">
+                    Type of support
+                  </label>
+                  <select className="h-12 rounded-md border border-brand-forest/15 bg-brand-white px-3 text-sm text-brand-forest outline-none focus:border-brand-green focus:ring-2 focus:ring-brand-green/20">
+                    <option>Hospital visit support</option>
+                    <option>Pharmacy or medicine pickup</option>
+                    <option>Errands and appointment help</option>
+                    <option>Companionship and check-in</option>
+                    <option>Food or comfort support</option>
+                    <option>Not sure yet</option>
+                  </select>
+                </div>
+
+                <div className="grid gap-2">
+                  <label className="text-sm font-medium text-brand-forest">
+                    Message or details
+                  </label>
+                  <Textarea
+                    placeholder="Tell us what happened, when support is needed, and anything important we should know."
+                    className="min-h-32 border-brand-forest/15 bg-brand-white"
+                  />
+                </div>
+
+                <Button
+                  type="button"
+                  className="mt-2 h-12 rounded-full bg-brand-forest text-base text-white hover:bg-brand-green"
+                >
+                  Submit care request
+                </Button>
+
+                <p className="text-center text-xs leading-6 text-brand-forest/50">
+                  This form is currently for demo purposes only. Backend and
+                  request handling will be added later.
+                </p>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </section>
     </main>
