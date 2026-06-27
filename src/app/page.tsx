@@ -370,6 +370,67 @@ export default function Home() {
           </div>
         </div>
       </section>
+            <section className="bg-white px-6 py-20">
+        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 md:items-center">
+          <div className="rounded-[2rem] bg-brand-white p-8 shadow-sm">
+            <p className="text-sm uppercase tracking-[0.25em] text-brand-forest/40">
+              For families abroad
+            </p>
+
+            <h2 className="mt-5 font-serif text-4xl font-bold tracking-tight text-brand-forest md:text-5xl">
+              You handle life abroad. We help your family feel looked after at home.
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-brand-forest/70">
+              Whether you live in the US, UK, Australia, the Gulf, or another
+              city, Hands gives you a way to arrange trusted local presence for
+              your parents when they need support.
+            </p>
+
+            <div className="mt-8 space-y-4">
+              {[
+                "You feel reassured knowing someone is physically present.",
+                "Your loved one gets support without feeling like a burden.",
+                "You receive simple updates instead of waiting anxiously.",
+              ].map((point) => (
+                <div key={point} className="flex gap-3">
+                  <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-gold text-sm text-brand-forest">
+                    ✓
+                  </span>
+                  <p className="text-brand-forest/75">{point}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-5">
+            <div className="rounded-[2rem] bg-brand-mist p-6">
+              <p className="font-serif text-3xl font-bold text-brand-forest">
+                “I wish I could be there.”
+              </p>
+              <p className="mt-4 text-base leading-7 text-brand-forest/70">
+                This is the feeling Hands is built around — the gap between love
+                and distance. We do not replace family. We help families stay
+                connected when being there in person is not possible.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] bg-brand-forest p-6 text-white">
+              <p className="text-sm uppercase tracking-[0.25em] text-white/40">
+                Real use case
+              </p>
+              <p className="mt-4 font-serif text-3xl font-bold">
+                A parent has a checkup tomorrow.
+              </p>
+              <p className="mt-4 text-base leading-7 text-white/70">
+                Their child books a Care Partner for two hours. The partner
+                arrives, accompanies them to the hospital, helps with basic
+                coordination, and shares visit updates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
