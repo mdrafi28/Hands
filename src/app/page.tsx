@@ -75,8 +75,11 @@ export default function Home() {
           </a>
         </nav>
 
-        <Button className="rounded-full bg-brand-forest px-6 text-white hover:bg-brand-green">
-          Request care
+        <Button
+          asChild
+          className="rounded-full bg-brand-forest px-6 text-white hover:bg-brand-green"
+        >
+          <a href="#request-care">Request care</a>
         </Button>
       </header>
 
@@ -97,15 +100,21 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Button className="h-12 rounded-full bg-brand-forest px-8 text-base text-white hover:bg-brand-green">
-              Book a Care Partner
-            </Button>
             <Button
+              asChild
+              className="h-12 rounded-full bg-brand-forest px-8 text-base text-white hover:bg-brand-green"
+            >
+              <a href="#request-care">Book a Care Partner</a>
+            </Button>
+
+            <Button
+              asChild
               variant="outline"
               className="h-12 rounded-full border-brand-forest/20 bg-transparent px-8 text-base text-brand-forest hover:bg-brand-mist"
             >
-              See how it works
+              <a href="#how-it-works">See how it works</a>
             </Button>
+
           </div>
 
           <div className="mt-10 grid max-w-lg grid-cols-3 gap-4 text-sm">
